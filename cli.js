@@ -21,7 +21,7 @@ const timezone = args.v || moment.tz.guess();
 let latitude = args.n || -args.s;
 let longitude = args.e || -args.w;
 
-const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=' + latitude + '&longitude=' + longitude + '&current_weather=true&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timezone=' + timezone);
+const response = await fetch("https://api.open-meteo.com/v1/forecast?latitude=" + latitude + "&longitude=" + longtitude + "&daily=precipitation_hours&timezone=" + timezone);
 const data = await response.json();
 
 if (args.j) {
