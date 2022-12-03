@@ -17,7 +17,8 @@ if (argv.h) {
 	process.exit(0);
 }
 
-const timezone = moment.tz.guess();
+const timezone = args.v || moment.tz.guess();
+let latitude = args.n || -args.s;
 
-const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=35.92&longitude=-79.05&current_weather=true&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timezone=America%2FNew_York');
+const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=' + latitude + '&longitude=-79.05&current_weather=true&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timezone=America%2FNew_York');
 
