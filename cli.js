@@ -4,7 +4,7 @@ import minimist from 'minimist';
 import fetch from 'node-fetch';
 import moment from 'moment-timezone';
 
-const minimist = minimist(process.argv.slice(2));
+const args = minimist(process.argv.slice(2));
 
 if (argv.h) {
 	console.log(`Usage: galosh.js [options] -[n|s] LATITUDE -[e|w] LONGITUDE -z TIME_ZONE
