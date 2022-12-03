@@ -44,7 +44,7 @@ if (days == 0) {
 	  }
 } else {
 	  if (data.daily.precipitation_hours[days] != 0) {
-		  console.log("You might need your galoshes tomorrowy.")
+		  console.log("You might need your galoshes tomorrow.")
 	  } else {
 		  console.log("You will not need your galoshes tomorrow.")
 	  }
