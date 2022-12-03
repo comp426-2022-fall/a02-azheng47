@@ -17,6 +17,7 @@ if (args.h) {
 	process.exit(0);
 }
 
+
 const timezone = args.v || moment.tz.guess();
 let latitude = args.n || -args.s;
 let longitude = args.e || -args.w;
