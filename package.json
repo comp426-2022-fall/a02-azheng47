@@ -1,0 +1,27 @@
+{
+  "name": "a02-azheng47",
+  "version": "1.0.0",
+  "description": "Weather app to determine if you should wear your galoshes",
+  "main": "cli.js",
+  "bin": {
+	  "galosh.js": "./cli.js"
+  },
+  "scripts": {
+    "test": "node cli.js -n 35.92 -w 79.05 -z America/New_York"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comp426-2022-fall/a02-azheng47.git"
+  },
+  "author": "Andrew Zheng",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/comp426-2022-fall/a02-azheng47/issues"
+  },
+  "homepage": "https://github.com/comp426-2022-fall/a02-azheng47#readme",
+  "dependencies": {
+    "minimist": "^1.2.7",
+    "moment-timezone": "^0.5.39",
+    "node-fetch": "^3.3.0"
+  }
+}
