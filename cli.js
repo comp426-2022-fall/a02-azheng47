@@ -24,3 +24,17 @@ let longitude = args.e || -args.w;
 const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=' + latitude + '&longitude=' + longitude + '&current_weather=true&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timezone=' + timezone);
 const data = await response.json();
 
+const days = args.d 
+
+if (days == 0) {
+	  console.log("today.")
+} else if (days > 1) {
+	  if (data.daily.precipitation_hours[days] != 0) {
+		console.log("You might need your galoshes in " + days + " days.")
+	  } else {
+		console.log("You will not need your galoshes in " + days + " days.")
+	  }
+} else {
+	  console.log("tomorrow.")
+}
+
